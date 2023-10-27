@@ -1,0 +1,241 @@
+model_2cdepthr_f_d64r_d10s
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ C_L1_2Ddepthr (DepthwiseCo  (None, 14, 14, 1)         5         
+ nv2D)                                                           
+                                                                 
+ L2_flatten (Flatten)        (None, 196)               0         
+                                                                 
+ L3_Dense64 (Dense)          (None, 64)                12608     
+                                                                 
+ L4_Dense10 (Dense)          (None, 10)                650       
+                                                                 
+=================================================================
+Total params: 13263 (51.81 KB)
+Trainable params: 13263 (51.81 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Name                           Value
+-----------------------------  --------------------------------------------
+name                           _TFProfRoot
+tensor_value
+run_count                      0
+exec_micros                    0
+accelerator_exec_micros        0
+cpu_exec_micros                0
+requested_bytes                0
+peak_bytes                     0
+residual_bytes                 0
+output_bytes                   0
+parameters                     0
+float_ops                      0
+devices                        []
+total_definition_count         8
+total_run_count                0
+total_exec_micros              0
+total_accelerator_exec_micros  0
+total_cpu_exec_micros          0
+total_requested_bytes          0
+total_peak_bytes               0
+total_residual_bytes           0
+total_output_bytes             0
+total_parameters               0
+total_float_ops                28256
+shapes                         []
+input_shapes                   {}
+children                       [name: "sequential/L3_Dense64/MatMul"
+                               float_ops: 25088
+                               total_definition_count: 1
+                               total_float_ops: 25088
+                               input_shapes {
+                                 key: 0
+                                 value {
+                                   dim {
+                                     size: 1
+                                   }
+                                   dim {
+                                     size: 196
+                                   }
+                                 }
+                               }
+                               input_shapes {
+                                 key: 1
+                                 value {
+                                   dim {
+                                     size: 196
+                                   }
+                                   dim {
+                                     size: 64
+                                   }
+                                 }
+                               }
+                               , name: "sequential/C_L1_2Ddepthr/depthwise"
+                               float_ops: 1568
+                               total_definition_count: 1
+                               total_float_ops: 1568
+                               input_shapes {
+                                 key: 0
+                                 value {
+                                   dim {
+                                     size: 1
+                                   }
+                                   dim {
+                                     size: 28
+                                   }
+                                   dim {
+                                     size: 28
+                                   }
+                                   dim {
+                                     size: 1
+                                   }
+                                 }
+                               }
+                               input_shapes {
+                                 key: 1
+                                 value {
+                                   dim {
+                                     size: 2
+                                   }
+                                   dim {
+                                     size: 2
+                                   }
+                                   dim {
+                                     size: 1
+                                   }
+                                   dim {
+                                     size: 1
+                                   }
+                                 }
+                               }
+                               , name: "sequential/L4_Dense10/MatMul"
+                               float_ops: 1280
+                               total_definition_count: 1
+                               total_float_ops: 1280
+                               input_shapes {
+                                 key: 0
+                                 value {
+                                   dim {
+                                     size: 1
+                                   }
+                                   dim {
+                                     size: 64
+                                   }
+                                 }
+                               }
+                               input_shapes {
+                                 key: 1
+                                 value {
+                                   dim {
+                                     size: 64
+                                   }
+                                   dim {
+                                     size: 10
+                                   }
+                                 }
+                               }
+                               , name: "sequential/C_L1_2Ddepthr/BiasAdd"
+                               float_ops: 196
+                               total_definition_count: 1
+                               total_float_ops: 196
+                               input_shapes {
+                                 key: 0
+                                 value {
+                                   dim {
+                                     size: 1
+                                   }
+                                   dim {
+                                     size: 14
+                                   }
+                                   dim {
+                                     size: 14
+                                   }
+                                   dim {
+                                     size: 1
+                                   }
+                                 }
+                               }
+                               input_shapes {
+                                 key: 1
+                                 value {
+                                   dim {
+                                     size: 1
+                                   }
+                                 }
+                               }
+                               , name: "sequential/L3_Dense64/BiasAdd"
+                               float_ops: 64
+                               total_definition_count: 1
+                               total_float_ops: 64
+                               input_shapes {
+                                 key: 0
+                                 value {
+                                   dim {
+                                     size: 1
+                                   }
+                                   dim {
+                                     size: 64
+                                   }
+                                 }
+                               }
+                               input_shapes {
+                                 key: 1
+                                 value {
+                                   dim {
+                                     size: 64
+                                   }
+                                 }
+                               }
+                               , name: "sequential/L4_Dense10/Softmax"
+                               float_ops: 50
+                               total_definition_count: 1
+                               total_float_ops: 50
+                               input_shapes {
+                                 key: 0
+                                 value {
+                                   dim {
+                                     size: 1
+                                   }
+                                   dim {
+                                     size: 10
+                                   }
+                                 }
+                               }
+                               , name: "sequential/L4_Dense10/BiasAdd"
+                               float_ops: 10
+                               total_definition_count: 1
+                               total_float_ops: 10
+                               input_shapes {
+                                 key: 0
+                                 value {
+                                   dim {
+                                     size: 1
+                                   }
+                                   dim {
+                                     size: 10
+                                   }
+                                 }
+                               }
+                               input_shapes {
+                                 key: 1
+                                 value {
+                                   dim {
+                                     size: 10
+                                   }
+                                 }
+                               }
+                               ]
+Multiply–accumulate operation:  14128
+loss [2.3020474910736084, 2.3011045455932617, 2.300154209136963, 2.2991719245910645, 2.2981579303741455, 2.297109365463257, 2.296020269393921, 2.2948830127716064, 2.2936885356903076, 2.2924280166625977]
+accuracy [0.10928333550691605, 0.132750004529953, 0.15058332681655884, 0.16276666522026062, 0.1753833293914795, 0.18543332815170288, 0.19308333098888397, 0.20091666281223297, 0.2059333324432373, 0.2107333391904831]
+val_loss [2.300764560699463, 2.299816608428955, 2.2988364696502686, 2.297821283340454, 2.296773672103882, 2.295689821243286, 2.294564962387085, 2.293384552001953, 2.292137384414673, 2.2908129692077637]
+val_accuracy [0.13609999418258667, 0.15610000491142273, 0.1712999939918518, 0.18279999494552612, 0.1915999948978424, 0.20180000364780426, 0.2094999998807907, 0.21410000324249268, 0.21719999611377716, 0.21969999372959137]
+{'optimizer': 'adam', 'loss': 'sparse_categorical_crossentropy', 'metrics': ['accuracy'], 'loss_weights': None, 'weighted_metrics': None, 'run_eagerly': None, 'steps_per_execution': None, 'jit_compile': None}
+Results
+Model Loss: 2.2908129692077637
+Model Accuracy: 0.21969999372959137
+Model Size: 192448 Bytes
+Optimization: None
+tflite model size: 55644 Bytes
+tflite Model Accuracy:  0.2197

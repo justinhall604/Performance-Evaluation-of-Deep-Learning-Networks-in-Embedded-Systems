@@ -1,0 +1,37 @@
+model_f_2c32_mp_2c64_mp_2c64_f_d10
+Model: "sequential_1"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_3 (Conv2D)           (None, 26, 26, 32)        320       
+                                                                 
+ max_pooling2d_2 (MaxPoolin  (None, 13, 13, 32)        0         
+ g2D)                                                            
+                                                                 
+ conv2d_4 (Conv2D)           (None, 11, 11, 64)        18496     
+                                                                 
+ max_pooling2d_3 (MaxPoolin  (None, 5, 5, 64)          0         
+ g2D)                                                            
+                                                                 
+ conv2d_5 (Conv2D)           (None, 3, 3, 64)          36928     
+                                                                 
+ flatten_1 (Flatten)         (None, 576)               0         
+                                                                 
+ dense_1 (Dense)             (None, 10)                5770      
+                                                                 
+=================================================================
+Total params: 61514 (240.29 KB)
+Trainable params: 61514 (240.29 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+loss [0.14742904901504517]
+accuracy [0.9552500247955322]
+val_loss [0.04302810877561569]
+val_accuracy [0.9861999750137329]
+{'optimizer': 'adam', 'loss': 'sparse_categorical_crossentropy', 'metrics': ['accuracy'], 'loss_weights': None, 'weighted_metrics': None, 'run_eagerly': None, 'steps_per_execution': None, 'jit_compile': None}
+Results
+Model Loss: 0.04302810877561569
+Model Accuracy: 0.9861999750137329
+Model Size: 781872 Bytes
+tflite model size: 249632 Bytes
+tflite Model Accuracy:  0.9862

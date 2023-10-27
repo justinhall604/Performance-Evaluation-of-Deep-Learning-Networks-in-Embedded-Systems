@@ -1,0 +1,24 @@
+model_f_d16r_r_2cnn_f_d64r_d10s
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ L1_flatten (Flatten)        (None, 784)               0         
+                                                                 
+ L2_Dense16 (Dense)          (None, 16)                12560     
+                                                                 
+ L3_Reshape (Reshape)        (None, 4, 4, 1)           0         
+                                                                 
+ L4_2Dcnn (Conv2D)           (None, 3, 3, 64)          320       
+                                                                 
+ L5_flatten (Flatten)        (None, 576)               0         
+                                                                 
+ L6_Dense64 (Dense)          (None, 64)                36928     
+                                                                 
+ L7_Dense10 (Dense)          (None, 10)                650       
+                                                                 
+=================================================================
+Total params: 50458 (197.10 KB)
+Trainable params: 50458 (197.10 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
